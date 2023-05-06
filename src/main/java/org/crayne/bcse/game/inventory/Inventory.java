@@ -246,7 +246,7 @@ public class Inventory {
     }
 
     private boolean maybeLoadArrow(@NotNull final ItemType type, @NotNull final String itemName, final int slot) {
-        return loadAnySingle(type, slot, ItemType.ARROW, itemName, (name, quantity, ignored) -> new ArrowItem(name, quantity));
+        return loadAnySingle(type, slot, ItemType.ARROW, itemName, ArrowItem::new);
     }
 
     private void loadWeaponBowShield(@NotNull final String name, final int slot, final int modifierIndex) {
@@ -348,7 +348,7 @@ public class Inventory {
     }
 
     @NotNull
-    private UInteger readEquippedItem(final int slot)  {
+    private UInteger readEquippedItem(final int slot) {
         return saveFile().saveFile().readUint32(savefileEquippedItemOffset(slot));
     }
 

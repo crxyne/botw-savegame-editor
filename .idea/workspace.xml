@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0a00938-b9b9-4a12-8d78-598a76945729" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/EquippableItem.java" afterDir="false" />
+    <list default="true" id="e0a00938-b9b9-4a12-8d78-598a76945729" name="Changes" comment="added EquippableItem and ItemType.ITEMS_EQUIPPED, fixed some bugs">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/debug/OffsetHashUtility.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_data.sav" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/inventory/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/inventory/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/armor/ArmorItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/armor/ArmorItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/weapon/WeaponItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/weapon/WeaponItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/internal/SaveFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/internal/SaveFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/internal/SaveFileOffsetHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/internal/SaveFileOffsetHash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/parsed/ParsedSaveFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/parsed/ParsedSaveFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/other/ArrowItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/other/ArrowItem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +23,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -94,6 +89,14 @@
       <option name="presentableId" value="Default" />
       <updated>1682264805548</updated>
     </task>
+    <task id="LOCAL-00001" summary="added EquippableItem and ItemType.ITEMS_EQUIPPED, fixed some bugs">
+      <created>1683364575276</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683364575276</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -106,5 +109,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added EquippableItem and ItemType.ITEMS_EQUIPPED, fixed some bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="added EquippableItem and ItemType.ITEMS_EQUIPPED, fixed some bugs" />
   </component>
 </project>
