@@ -1,6 +1,7 @@
 package org.crayne.bcse.parsed;
 
 import org.crayne.bcse.game.inventory.Inventory;
+import org.crayne.bcse.game.misc.Rune;
 import org.crayne.bcse.internal.SaveFile;
 import org.crayne.bcse.internal.SaveFileOffsetHash;
 import org.jetbrains.annotations.NotNull;
@@ -54,6 +55,8 @@ public class ParsedSaveFile {
     private float horsePositionY;
     private float horsePositionZ;
 
+    private UInteger selectedRune;
+
     private final Map<SaveFileOffsetHash, Integer> offsetHashMap = new HashMap<>();
 
     public ParsedSaveFile(@NotNull final File file) {
@@ -102,6 +105,8 @@ public class ParsedSaveFile {
         horsePositionY      = readFloat32(SaveFileOffsetHash.HORSE_POSITION, 8);
         horsePositionZ      = readFloat32(SaveFileOffsetHash.HORSE_POSITION, 16);
 
+        selectedRune        = readUint32(SaveFileOffsetHash.SELECTED_RUNE);
+
         inventory           = new Inventory(this);
         inventory.loadFromSavefile();
     }
@@ -140,7 +145,7 @@ public class ParsedSaveFile {
         if (offsetHashMap.containsKey(SaveFileOffsetHash.HAS_MOTORCYCLE))
             writeUint32(SaveFileOffsetHash.HAS_MOTORCYCLE, UInteger.valueOf(hasMotorcycle ? 1 : 0));
 
-        writeFloat32(SaveFileOffsetHash.MAX_STAMINA, maxStamina);
+        writeFloat32(SaveFileOffsetHash.MAX_STAMINA, maxStamina * 1000.0f);
 
         writeString256(SaveFileOffsetHash.MAP_NAME, mapName);
         writeString256(SaveFileOffsetHash.MAP_TYPE, mapType);
@@ -153,7 +158,26 @@ public class ParsedSaveFile {
         writeFloat32(SaveFileOffsetHash.HORSE_POSITION, 8, horsePositionY);
         writeFloat32(SaveFileOffsetHash.HORSE_POSITION, 16, horsePositionZ);
 
+        writeUint32(SaveFileOffsetHash.SELECTED_RUNE, selectedRune);
+
         inventory.saveToSavefile();
+    }
+
+    @NotNull
+    public Optional<Rune> selectedRuneAsRune() {
+        return selectedRune == null ? Optional.empty() : Rune.ofId(selectedRune.intValue());
+    }
+
+    public UInteger selectedRune() {
+        return selectedRune;
+    }
+
+    public void selectedRune(final UInteger selectedRune) {
+        this.selectedRune = selectedRune;
+    }
+
+    public void selectedRune(@NotNull final Rune rune) {
+        this.selectedRune = UInteger.valueOf(rune.id());
     }
 
     @NotNull

@@ -1,6 +1,6 @@
 package org.crayne.bcse;
 
-import org.crayne.bcse.debug.OffsetHashUtility;
+import org.crayne.bcse.parsed.ParsedSaveFile;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
@@ -8,8 +8,12 @@ import java.io.File;
 public class Main {
 
     public static void main(@NotNull final String... args) {
-        final OffsetHashUtility offsetHashUtility = new OffsetHashUtility(new File("game_data_before.sav"), new File("game_data_after.sav"));
-        offsetHashUtility.compare();
+        final ParsedSaveFile saveFile = new ParsedSaveFile(new File("game_data.sav"));
+        saveFile.load();
+
+        saveFile.maxStamina(2.5f);
+
+        saveFile.saveToFile(new File("game_data.sav"));
     }
 
 }

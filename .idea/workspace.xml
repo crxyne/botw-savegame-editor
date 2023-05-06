@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0a00938-b9b9-4a12-8d78-598a76945729" name="Changes" comment="added EquippableItem and ItemType.ITEMS_EQUIPPED, fixed some bugs">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/debug/OffsetHashUtility.java" afterDir="false" />
+    <list default="true" id="e0a00938-b9b9-4a12-8d78-598a76945729" name="Changes" comment="made ArrowItem equippable and added OffsetHashUtility to make life easier">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/misc/Rune.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/inventory/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/inventory/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/other/ArrowItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/other/ArrowItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/debug/OffsetHashUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/debug/OffsetHashUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/internal/SaveFileOffsetHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/internal/SaveFileOffsetHash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/parsed/ParsedSaveFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/parsed/ParsedSaveFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +23,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -96,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683364575276</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="made ArrowItem equippable and added OffsetHashUtility to make life easier">
+      <created>1683365740319</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683365740319</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -112,6 +120,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added EquippableItem and ItemType.ITEMS_EQUIPPED, fixed some bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="added EquippableItem and ItemType.ITEMS_EQUIPPED, fixed some bugs" />
+    <MESSAGE value="made ArrowItem equippable and added OffsetHashUtility to make life easier" />
+    <option name="LAST_COMMIT_MESSAGE" value="made ArrowItem equippable and added OffsetHashUtility to make life easier" />
   </component>
 </project>

@@ -42,7 +42,8 @@ public enum SaveFileOffsetHash {
     HORSE_TYPES(0xc247b696),
     HORSE_BONDS(0xe1a0ca54),
     MAP_ICON_POS(0xea9def3f),
-    MAP_ICON_NO(0x9383490e);
+    MAP_ICON_NO(0x9383490e),
+    SELECTED_RUNE(0xa439d800);
 
     private final int offsetHash;
     private final boolean mustExist;
