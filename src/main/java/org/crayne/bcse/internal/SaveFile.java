@@ -72,7 +72,7 @@ public class SaveFile {
     }
 
     public void writeString(int offset, @NotNull final String str, final int length) {
-        if (length == 0 || str.isEmpty()) return;
+        if (length == 0) return;
         final int initialOffset = offset;
 
         for (int i = 0; i < length && i < str.length(); i++) {

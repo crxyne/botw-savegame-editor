@@ -16,7 +16,7 @@ public enum SaveFileOffsetHash {
     DEFEATED_TALUS_AMOUNT(0x698266be),
     DEFEATED_MOLDUGA_AMOUNT(0x441b7231),
     TIME_PLAYED(0x73c29681),
-    HAS_MOTORCYCLE(0xc9328299),
+    HAS_MOTORCYCLE(0xc9328299, false),
     MAX_STAMINA(0x3adff047),
     MAP_NAME(0x0bee9e46),
     MAP_TYPE(0xd913b769),
@@ -33,6 +33,8 @@ public enum SaveFileOffsetHash {
     ITEMS(0x5f283289),
     ITEMS_VALUE(0x6a09fc59), // for materials this is the quantity, for weapons the durability, etc
 
+    ITEMS_EQUIPPED(0x824892be),
+
     HORSE_SADDLES(0x333aa6e5),
     HORSE_REINS(0x6150c6be),
     HORSE_NAMES(0x7b74e117),
@@ -43,9 +45,16 @@ public enum SaveFileOffsetHash {
     MAP_ICON_NO(0x9383490e);
 
     private final int offsetHash;
+    private final boolean mustExist;
+
+    SaveFileOffsetHash(final int offsetHash, final boolean mustExist) {
+        this.offsetHash = offsetHash;
+        this.mustExist = mustExist;
+    }
 
     SaveFileOffsetHash(final int offsetHash) {
         this.offsetHash = offsetHash;
+        this.mustExist = true;
     }
 
     @NotNull
@@ -53,4 +62,7 @@ public enum SaveFileOffsetHash {
         return UInteger.valueOf(offsetHash);
     }
 
+    public boolean mustExist() {
+        return mustExist;
+    }
 }

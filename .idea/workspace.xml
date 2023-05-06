@@ -5,32 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0a00938-b9b9-4a12-8d78-598a76945729" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_data.sav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/inventory/Inventory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/ItemType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/armor/ArmorColor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/armor/ArmorItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/other/ArrowItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/other/MaterialItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/other/SpecialItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/weapon/Modifier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/weapon/ModifierType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/weapon/WeaponItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/internal/SaveFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/internal/SaveFileException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/internal/SaveFileOffsetHash.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/parsed/ParsedSaveFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/parsed/ParsedSaveFileException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/EquippableItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_data.sav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/inventory/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/inventory/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/armor/ArmorItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/armor/ArmorItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/weapon/WeaponItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/game/item/weapon/WeaponItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/internal/SaveFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/internal/SaveFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/internal/SaveFileOffsetHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/internal/SaveFileOffsetHash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/parsed/ParsedSaveFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/crayne/bcse/parsed/ParsedSaveFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +29,7 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -65,11 +50,15 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/crayne/botw-savegame-editor/save-editor/.idea"
+    "last_opened_file_path": "/home/crayne/botw-savegame-editor/save-editor",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/.idea" />
     </key>
     <key name="MoveFile.RECENT_KEYS">

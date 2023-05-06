@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.channels.FileChannel;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -71,7 +72,9 @@ public class ParsedSaveFile {
     public void load() {
         offsetHashMap.clear();
         offsetHashMap.putAll(loadOffsets());
-        if (offsetHashMap.size() != 32 && offsetHashMap.size() != 33) throw new ParsedSaveFileException("Corrupted savefile was found, unable to load offsets from hashes");
+
+        if (Arrays.stream(SaveFileOffsetHash.values()).anyMatch(h -> h.mustExist() && !offsetHashMap.containsKey(h)))
+            throw new ParsedSaveFileException("Corrupted savefile was found, unable to load all offsets from hashes");
 
         rupees              = readUint32(SaveFileOffsetHash.RUPEES);
         mons                = readUint32(SaveFileOffsetHash.MONS);
@@ -133,7 +136,9 @@ public class ParsedSaveFile {
         writeUint32(SaveFileOffsetHash.DEFEATED_TALUS_AMOUNT, defeatedTalus);
         writeUint32(SaveFileOffsetHash.DEFEATED_MOLDUGA_AMOUNT, defeatedMolduga);
         writeUint32(SaveFileOffsetHash.TIME_PLAYED, timePlayed);
-        writeUint32(SaveFileOffsetHash.HAS_MOTORCYCLE, UInteger.valueOf(hasMotorcycle ? 1 : 0));
+
+        if (offsetHashMap.containsKey(SaveFileOffsetHash.HAS_MOTORCYCLE))
+            writeUint32(SaveFileOffsetHash.HAS_MOTORCYCLE, UInteger.valueOf(hasMotorcycle ? 1 : 0));
 
         writeFloat32(SaveFileOffsetHash.MAX_STAMINA, maxStamina);
 
@@ -338,7 +343,7 @@ public class ParsedSaveFile {
 
     @NotNull
     private Optional<Integer> findOffsetByHash(@NotNull final SaveFileOffsetHash hash) {
-        for (int i = 0x0c; i < saveFile.buffer().array().length; i += 8)
+        for (int i = 0x04; i < saveFile.buffer().array().length; i += 8)
             if (hash.offsetHash().equals(saveFile.readUint32(i))) return Optional.of(i + 4);
 
         return Optional.empty();

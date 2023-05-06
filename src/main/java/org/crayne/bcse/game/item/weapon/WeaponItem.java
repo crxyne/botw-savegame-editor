@@ -1,6 +1,6 @@
 package org.crayne.bcse.game.item.weapon;
 
-import org.crayne.bcse.game.item.Item;
+import org.crayne.bcse.game.item.EquippableItem;
 import org.crayne.bcse.game.item.ItemType;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -8,7 +8,7 @@ import org.joou.UInteger;
 
 import java.util.Optional;
 
-public class WeaponItem implements Item {
+public class WeaponItem implements EquippableItem {
 
     @NotNull
     private String name;
@@ -22,11 +22,14 @@ public class WeaponItem implements Item {
     @Nullable
     private Modifier modifier;
 
-    public WeaponItem(@NotNull final String name, @NotNull final UInteger durability, @Nullable final Modifier modifier) {
+    private boolean equipped;
+
+    public WeaponItem(@NotNull final String name, @NotNull final UInteger durability, @Nullable final Modifier modifier, final boolean equipped) {
         this.name = name;
         this.type = ItemType.ofName(name);
         this.value = durability;
         this.modifier = modifier == null || (modifier.types().length == 0 && modifier.value().intValue() == 0 && !modifier.plus()) ? null : modifier;
+        this.equipped = equipped;
     }
 
     @NotNull
@@ -70,13 +73,22 @@ public class WeaponItem implements Item {
         this.modifier = modifier;
     }
 
+    public boolean equipped() {
+        return equipped;
+    }
+
+    public void equipped(final boolean b) {
+        this.equipped = b;
+    }
+
     @NotNull
     public String toString() {
         return "WeaponItem{" +
                 "name='" + name + '\'' +
                 ", type=" + type +
-                ", durability=" + value +
+                ", value=" + value +
                 ", modifier=" + modifier +
+                ", equipped=" + equipped +
                 '}';
     }
 }

@@ -1,11 +1,11 @@
 package org.crayne.bcse.game.item.armor;
 
-import org.crayne.bcse.game.item.Item;
+import org.crayne.bcse.game.item.EquippableItem;
 import org.crayne.bcse.game.item.ItemType;
 import org.jetbrains.annotations.NotNull;
 import org.joou.UInteger;
 
-public class ArmorItem implements Item {
+public class ArmorItem implements EquippableItem {
 
     @NotNull
     private String name;
@@ -15,6 +15,8 @@ public class ArmorItem implements Item {
 
     @NotNull
     private UInteger value; // value is the armor color in this case
+
+    private boolean equipped;
 
     @NotNull
     public String name() {
@@ -26,10 +28,11 @@ public class ArmorItem implements Item {
         return type;
     }
 
-    public ArmorItem(@NotNull final String name, @NotNull final UInteger value) {
+    public ArmorItem(@NotNull final String name, @NotNull final UInteger value, final boolean equipped) {
         this.name = name;
         this.value = value;
         this.type = ItemType.ofName(name);
+        this.equipped = equipped;
     }
 
     public void name(@NotNull final String name) {
@@ -59,13 +62,21 @@ public class ArmorItem implements Item {
         return ArmorColor.ofColorValue(value.intValue());
     }
 
+    public boolean equipped() {
+        return equipped;
+    }
+
+    public void equipped(final boolean b) {
+        this.equipped = b;
+    }
+
     @NotNull
     public String toString() {
         return "ArmorItem{" +
                 "name='" + name + '\'' +
                 ", type=" + type +
-                ", color=" + armorColor() + " (value=" + value + ")" +
+                ", value=" + value +
+                ", equipped=" + equipped +
                 '}';
     }
-
 }
